@@ -7,7 +7,7 @@
 //git commit -m  "hola"
 
 
-//git status
+//git status    
 
 
 
