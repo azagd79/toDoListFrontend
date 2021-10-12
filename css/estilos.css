@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap');
+
+:root{
+    --negro: #212121;
+    --blanco: #fff;
+    --titulo: 'Fredoka One', cursive;
+    --principal: 'Raleway', sans-serif;
+    --morado: #701ebd;
+    --morado2: #591d92;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*  HEADER INICIO   */
+.header-navegacion{
+   width: 100%;
+   height: 110px;
+ 
+}
+
+.header-navegacion .header-titulo{
+    background: var(--morado);
+    color: var(--blanco);
+    height: 70px;
+    
+}
+.header-navegacion .header-titulo h1{
+    font-family: var(--titulo);
+}
+.header-navegacion .header-vacio{
+    background:   var(--morado2);
+    width: 100%;
+    height: 40px;
+}
+
+
+/* HEADER FINAL */
+/* .container-tareas{
+   background: #fdf9f9;
+   height: auto;
+} */
+
+.container-tareas .container-formulario{
+    width: 57%;
+    margin: 80px auto;
+    height: 230px;
+     
+}
+
+.container-tareas .container-formulario h1{
+    font-family: var(--principal);
+    font-weight: 600;
+}
+
+#formulario{
+    width: 70%;
+    margin: auto;
+    height: 120px;
+    font-family: var(--principal);
+}
+
+#formulario .tareas{
+ width: 70%;
+}
+
+#formulario .boton{
+    border: none;
+    padding: 10px 15px;
+    background: var(--morado);
+    color: var(--blanco);
+    transition: 1s ease background;
+    animation: 2s boton  ease infinite;
+    font-weight: 400;
+    width: 30%;
+}
+#formulario .boton:hover{
+  background: var(--morado2);
+}
+
+#formulario .boton i{
+    font-size: 22px;
+}
+
+.titulo-lista{
+    font-family: var(--principal);
+    font-weight: 800;
+}
+
+.lista{
+    width: 80%;
+    margin: auto;
+    height: 400px;
+    overflow-y: scroll;
+}
+.lista-nombres{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  font-family: var(--principal);
+}
+.lista-nombres .numeracion{
+    grid-column: 1/2;
+    padding-left: 10px;
+    font-weight: 600;
+}
+.lista-nombres .tarea{
+    grid-column: 2/3;
+    padding-left: 10px;
+    font-weight: 600;
+}
+.lista-nombres .controles{
+    grid-column: 3/4;
+    padding-left: 10px;
+    font-weight: 600;
+}
+
+.lista-item{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    font-family: var(--principal);
+}
+.lista-item .numeracion-item{
+    grid-column: 1/2;
+    margin: 0;
+    padding-left: 10px;
+    font-weight: 800;
+    font-size: 22px;
+}
+.lista-item .tareas-item{
+    grid-column: 2/3;
+    margin-bottom: 0;
+}
+.lista-item .controles-item{
+    grid-column: 3/4;
+    margin: 0;
+}
+.lista-item .controles-item button:first-child{
+    background: #8610a3;
+    border: none;
+    color: var(--blanco);
+    padding:  7px;
+}
+.lista-item .controles-item button:nth-child(2){
+    background: #500a61;
+    border: none;
+    padding: 7px;
+    color: var(--blanco);
+}
+
+
+
+.mensaje{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 315px;
+    height: 70px;
+    top: 20px;
+    right: 30px;
+    transition: .6s ease ;
+    clip-path:   circle(0% at center);
+}
+
+.mensaje.tarea-enviada{
+
+    display: flex;
+    align-items: center;  
+    justify-content: center;
+    width: 315px;
+    height: 70px;
+    top: 20px;
+    right: 30px;
+    transition: .6s ease ;
+    clip-path: circle(100% at center);
+}
+
+.mensaje.modificar{
+    display: flex;
+    align-items: center;  
+    justify-content: center;
+    width: 315px;
+    height: 70px;
+    top: 20px;
+    right: 30px;
+    transition: .6s ease ;
+    clip-path: circle(100% at center);
+}
+.mensaje.eliminar{
+    display: flex;
+    align-items: center;  
+    justify-content: center;
+    width: 315px;
+    height: 70px;
+    top: 20px;
+    right: 30px;
+    transition: .6s ease ;
+    clip-path: circle(100% at center);
+}
+
+.mensaje i{
+    font-size: 29px;
+}
+.mensaje .mensaje-info{
+    font-size: 18px;
+    font-family: var(--principal);
+}
+
+@media (max-width: 1220px) {
+    #formulario .tareas{
+        width: 60%;
+       }
+       #formulario .boton{
+       width: 40%;
+       }
+}
+
+@media (max-width: 922px){
+    #formulario{
+        width: 90%;
+        margin: auto;
+    }
+}
+
+@media (max-width: 850px){
+    .lista-item .controles-item{
+        grid-column: 3/4;
+      display: flex;
+      justify-content: flex-start;
+    }
+    /* .lista-item .controles-item button:first-child{
+         font-size: 14px;
+         padding: 5px 10px;
+    }
+    .lista-item .controles-item button:nth-child(2){
+        background: #500a61;
+        border: none;
+        padding: 7px;
+        color: var(--blanco);
+    } */
+    .lista{
+        width: 90%;
+        margin: auto;
+    }
+}
+
+@media (max-width: 738px) {
+    .container-tareas  .container-formulario{
+        width: 90%;
+    }
+}
+@keyframes boton {
+     0%{
+         transform: translateY(-3px);
+     }
+     50%{
+         transform: translateY(0);
+     }
+     100%{
+         transform: translateY(-3px);
+     }
+}
